@@ -1,0 +1,30 @@
+*{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:Arial,sans-serif;background:#f4f7fb;color:#243044;line-height:1.6}
+        header{background:linear-gradient(135deg,#315cce,#6c63d9);color:white;padding:35px 20px;text-align:center}
+        header h1{font-size:32px;margin-bottom:8px}
+        header p{opacity:.95}
+        nav{background:white;display:flex;justify-content:center;gap:8px;flex-wrap:wrap;padding:12px;position:sticky;top:0;z-index:10;box-shadow:0 2px 8px #0001}
+        nav button{border:0;background:#eef2ff;color:#315cce;padding:10px 15px;border-radius:20px;cursor:pointer;font-weight:bold}
+        nav button:hover{background:#315cce;color:white}
+        main{max-width:1000px;margin:auto;padding:25px 15px}
+        .section{display:none}
+        .section.active{display:block}
+        .card{background:white;border-radius:15px;padding:22px;margin-bottom:18px;box-shadow:0 3px 12px #00000012}
+        .card h2{color:#315cce;margin-bottom:10px}
+        .card h3{margin:12px 0 6px}
+        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+        .icon{font-size:32px}
+        ul{padding-left:22px}
+        .tip{background:#eef7ff;border-left:5px solid #315cce;padding:12px;margin-top:12px;border-radius:8px}
+        .case{background:#fff8e8;border-left:5px solid #f0a500;padding:15px;border-radius:8px;margin:12px 0}
+        .option{display:block;width:100%;text-align:left;margin:8px 0;padding:12px;border:1px solid #ddd;background:#fafafa;border-radius:8px;cursor:pointer}
+        .option:hover{background:#eef2ff}
+        .result{font-weight:bold;margin-top:12px}
+        .progress{height:12px;background:#ddd;border-radius:10px;overflow:hidden;margin:10px 0}
+        .bar{height:100%;width:0;background:#315cce;transition:.3s}
+        .challenge{border:2px dashed #6c63d9;padding:15px;border-radius:12px;margin-top:12px}
+        footer{text-align:center;background:#202a3a;color:white;padding:20px;margin-top:30px}
+        .badge{display:inline-block;background:#e8f0ff;color:#315cce;padding:5px 10px;border-radius:15px;font-size:13px}
+        input{padding:11px;width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0}
+        .primary{background:#315cce;color:white;border:0;padding:11px 18px;border-radius:8px;cursor:pointer;font-weight:bold}
+        .small{font-size:14px;color:#667085}

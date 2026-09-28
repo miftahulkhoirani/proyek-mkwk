@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Smart School</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <header>
+        <h1>📱 Digital Smart School</h1>
+        <p>Belajar Cerdas, Bermedia Sosial dengan Bijak</p>
+    </header>
+
+    <nav>
+        <button onclick="show('beranda')">🏠 Beranda</button>
+        <button onclick="show('etika')">📱 Etika Digital</button>
+        <button onclick="show('cek')">🔍 Cek Informasi</button>
+        <button onclick="show('simulasi')">💬 Simulasi</button>
+        <button onclick="show('kuis')">📝 Kuis</button>
+        <button onclick="show('tantangan')">🌱 Tantangan</button>
+        <button onclick="show('guru')">👩‍🏫 Menu Guru</button>
+    </nav>
+
+    <main>
+
+        <section id="beranda" class="section active">
+            <div class="card">
+            <h2>Selamat Datang! 👋</h2>
+            <p>Website ini membantu siswa SMP memahami cara menggunakan internet dan media sosial secara aman, kritis, bertanggung jawab, dan positif.</p>
+            <div class="tip"><b>Prinsip utama:</b> Saring sebelum sharing, pikir sebelum posting, dan hormati orang lain.</div>
+            </div>
+
+            <div class="grid">
+            <div class="card"><div class="icon">🔐</div><h3>Jaga Privasi</h3><p>Lindungi data pribadi seperti alamat, nomor telepon, password, dan lokasi.</p></div>
+            <div class="card"><div class="icon">🔍</div><h3>Berpikir Kritis</h3><p>Periksa sumber dan kebenaran informasi sebelum membagikannya.</p></div>
+            <div class="card"><div class="icon">💬</div><h3>Berkomunikasi Bijak</h3><p>Gunakan bahasa yang sopan dan jangan melakukan cyberbullying.</p></div>
+            <div class="card"><div class="icon">🌱</div><h3>Bangun Jejak Positif</h3><p>Gunakan media sosial untuk belajar, berkarya, dan menyebarkan hal positif.</p></div>
+            </div>
+        </section>
+
+        <section id="etika" class="section">
+            <div class="card">
+            <h2>📱 5 Etika Bermedia Sosial</h2>
+            <ol>
+            <li><b>Pikir sebelum posting.</b> Tanyakan: apakah ini benar, perlu, dan tidak merugikan?</li>
+            <li><b>Jaga privasi.</b> Jangan sembarangan membagikan data pribadi.</li>
+            <li><b>Hormati orang lain.</b> Hindari hinaan, ejekan, dan komentar yang menyakiti.</li>
+            <li><b>Periksa informasi.</b> Jangan langsung percaya atau menyebarkan berita.</li>
+            <li><b>Gunakan untuk hal positif.</b> Belajar, berbagi karya, dan membangun komunikasi yang sehat.</li>
+            </ol>
+            </div>
+            <div class="card">
+            <h2>🔐 Data yang Sebaiknya Dijaga</h2>
+            <div class="grid">
+            <p>❌ Password</p><p>❌ Alamat rumah</p><p>❌ Nomor telepon</p><p>❌ Kode OTP</p>
+            <p>❌ Foto dokumen penting</p><p>❌ Lokasi secara real-time</p>
+            </div>
+            </div>
+        </section>
+
+        <section id="cek" class="section">
+            <div class="card">
+                <h2>🔍 Cek Informasi Sebelum Sharing</h2>
+                <p>Gunakan metode <span class="badge">STOP</span>:</p>
+            <div class="grid">
+            <div><h3>S — Stop</h3><p>Jangan langsung membagikan informasi.</p></div>
+            <div><h3>T — Telusuri</h3><p>Cari sumber asli dan tanggal informasi.</p></div>
+            <div><h3>O — Observasi</h3><p>Bandingkan dengan sumber terpercaya lainnya.</p></div>
+            <div><h3>P — Pastikan</h3><p>Bagikan hanya jika informasinya cukup terverifikasi.</p></div>
+            </div>
+            <div class="tip"><b>Ingat:</b> Judul yang mengejutkan atau membuat panik bukan berarti informasinya benar.</div>
+            </div>
+        </section>
+
+        <section id="simulasi" class="section">
+            <div class="card">
+            <h2>💬 Simulasi Kasus</h2>
+            <p><b>Kasus 1:</b> Temanmu mengirim berita di grup kelas: “Besok sekolah diliburkan!” tetapi tidak ada sumber resmi.</p>
+            <div class="case">Apa yang sebaiknya kamu lakukan?</div>
+            <button class="option" onclick="answer(this,false)">A. Langsung sebarkan ke semua grup.</button>
+            <button class="option" onclick="answer(this,true)">B. Periksa sumber resmi sekolah terlebih dahulu.</button>
+            <button class="option" onclick="answer(this,false)">C. Percaya karena teman yang mengirim.</button>
+            <p id="simResult" class="result"></p>
+            </div>
+
+            <div class="card">
+            <p><b>Kasus 2:</b> Kamu melihat teman mendapat komentar yang mengejek fisiknya.</p>
+            <div class="case">Tindakan yang paling tepat?</div>
+            <button class="option" onclick="case2(this,false)">A. Ikut mengejek agar terlihat lucu.</button>
+            <button class="option" onclick="case2(this,true)">B. Tidak ikut menyebarkan, mendukung teman, dan melapor jika diperlukan.</button>
+            <button class="option" onclick="case2(this,false)">C. Screenshot lalu sebarkan ke teman lain.</button>
+            <p id="case2Result" class="result"></p>
+            </div>
+            </div>
+        </section>
+
+        <section id="kuis" class="section">
+            <div class="card">
+            <h2>📝 Kuis Literasi Digital</h2>
+            <p>Jawab 5 pertanyaan berikut.</p>
+            <div id="quiz"></div>
+            <button class="primary" onclick="finishQuiz()">Lihat Nilai</button>
+            <p id="score" class="result"></p>
+            <div class="progress"><div id="bar" class="bar"></div></div>
+            </div>
+        </section>
+
+        <section id="tantangan" class="section">
+            <div class="card">
+            <h2>🌱 Tantangan 7 Hari Bijak Bermedia Sosial</h2>
+            <p>Centang tantangan yang sudah kamu lakukan. Progress tersimpan selama halaman tidak ditutup.</p>
+            <div id="tasks"></div>
+            <div class="progress"><div id="challengeBar" class="bar"></div></div>
+            <p id="challengeText" class="result"></p>
+            </div>
+        </section>
+
+        <section id="guru" class="section">
+            <div class="card">
+            <h2>👩‍🏫 Menu Guru</h2>
+            <p>Bagian ini dapat digunakan guru untuk mendampingi kegiatan literasi digital di kelas.</p>
+            <h3>Rencana penggunaan</h3>
+            <ul>
+            <li>Gunakan materi Etika Digital sebagai bahan pembuka.</li>
+            <li>Berikan siswa waktu mengerjakan Simulasi Kasus.</li>
+            <li>Gunakan Kuis sebagai evaluasi sederhana.</li>
+            <li>Minta siswa mengikuti Tantangan 7 Hari.</li>
+            <li>Diskusikan hasil tantangan dan pengalaman siswa di kelas.</li>
+            </ul>
+            <div class="tip"><b>Keberlanjutan:</b> Guru dapat menggunakan website ini kembali setiap semester dan menambahkan kasus/kuis baru sesuai kondisi siswa.</div>
+            </div>
+            <div class="card">
+            <h2>📊 Refleksi Kelas</h2>
+            <p>Contoh pertanyaan untuk diskusi:</p>
+            <ul>
+            <li>Informasi apa yang paling sulit dibedakan antara fakta dan hoaks?</li>
+            <li>Apa risiko membagikan data pribadi?</li>
+            <li>Bagaimana cara menggunakan media sosial untuk kegiatan positif?</li>
+            </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p><b>Digital Smart School</b></p>
+        <p>Prototipe Program Literasi Digital Siswa SMP</p>
+    </footer>
+
+    <script>
+        function show(id){
+        document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+        window.scrollTo({top:0,behavior:'smooth'});
+        }
+
+        function answer(btn,correct){
+        document.getElementById('simResult').textContent=correct?'✅ Benar! Periksa sumber resmi sebelum menyebarkan informasi.':'❌ Belum tepat. Informasi perlu diperiksa terlebih dahulu.';
+        document.getElementById('simResult').style.color=correct?'green':'crimson';
+        }
+        function case2(btn,correct){
+        document.getElementById('case2Result').textContent=correct?'✅ Benar! Kita perlu menghormati dan mendukung orang lain.':'❌ Belum tepat. Jangan ikut menyebarkan atau memperkuat perundungan.';
+        document.getElementById('case2Result').style.color=correct?'green':'crimson';
+        }
+
+        const questions=[
+        ['Apa yang harus dilakukan sebelum membagikan berita?',['Langsung share','Memeriksa sumber','Mengubah judul'],'1'],
+        ['Manakah yang termasuk data pribadi?',['Password','Warna favorit','Makanan kesukaan'],'0'],
+        ['Sikap yang tepat saat berkomentar adalah...',['Menghina','Sopan dan menghargai','Memancing pertengkaran'],'1'],
+        ['Jika menerima informasi mencurigakan, sebaiknya...',['Sebarkan','Abaikan tanpa berpikir','Telusuri kebenarannya'],'2'],
+        ['Media sosial sebaiknya digunakan untuk...',['Hal positif dan bertanggung jawab','Menyebarkan rahasia teman','Cyberbullying'],'0']
+        ];
+        const quiz=document.getElementById('quiz');
+        questions.forEach((q,i)=>{
+        let div=document.createElement('div'); div.className='card';
+        div.innerHTML='<h3>'+ (i+1)+'. '+q[0]+'</h3>';
+        q[1].forEach((o,j)=>div.innerHTML+=`<label class="option"><input type="radio" name="q${i}" value="${j}"> ${o}</label>`);
+        quiz.appendChild(div);
+        });
+        function finishQuiz(){
+        let score=0;
+        questions.forEach((q,i)=>{
+        let a=document.querySelector(`input[name="q${i}"]:checked`);
+        if(a && a.value===q[2]) score++;
+        });
+        document.getElementById('score').textContent='Nilai kamu: '+(score*20)+'/100 — '+score+' dari 5 benar.';
+        document.getElementById('bar').style.width=(score*20)+'%';
+        }
+
+        const taskNames=[
+        'Memeriksa sumber sebelum membagikan informasi.',
+        'Tidak membagikan password atau OTP.',
+        'Memberikan komentar yang sopan.',
+        'Tidak ikut menyebarkan ejekan/cyberbullying.',
+        'Mengikuti satu akun edukatif atau positif.',
+        'Mengurangi membagikan informasi pribadi.',
+        'Mengunggah atau membagikan satu hal yang bermanfaat.'
+        ];
+        const tasks=document.getElementById('tasks');
+        taskNames.forEach((t,i)=>{
+        tasks.innerHTML+=`<label class="option"><input type="checkbox" onchange="updateTasks()"> Hari ${i+1}: ${t}</label>`;
+        });
+        function updateTasks(){
+        let checked=document.querySelectorAll('#tasks input:checked').length;
+        document.getElementById('challengeBar').style.width=(checked/7*100)+'%';
+        document.getElementById('challengeText').textContent=checked+' dari 7 tantangan selesai.';
+        }
+    </script>
+</body>
+</html>
